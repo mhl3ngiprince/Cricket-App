@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "984070643052",
+    "project_id": "spu-cricket-club",
+    "storage_bucket": "spu-cricket-club.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984070643052:android:fb885850f5d588cd48a749",
+        "android_client_info": {
+          "package_name": "com.finedine.spucricketclub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBivZ8gT_zR6liPY0aqTANDGivr4RNXBMo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

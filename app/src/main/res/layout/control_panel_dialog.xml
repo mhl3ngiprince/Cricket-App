@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Match Controls"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/spu_dark_blue"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Recording Controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/dialog_button_start_recording"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Start Recording"
+            android:backgroundTint="@color/spu_blue"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/dialog_button_stop_recording"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Stop Recording"
+            android:backgroundTint="@color/spu_accent_red"
+            android:textColor="@color/white"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dialog_player_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Player Name" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <Button
+            android:id="@+id/dialog_button_add_score"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Run"
+            android:backgroundTint="@color/spu_success"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/dialog_button_add_wicket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add Wicket"
+            android:backgroundTint="@color/spu_danger"
+            android:textColor="@color/white"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- Scanning and Player Management -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_button_toggle_scanning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Toggle Scanning"
+            android:backgroundTint="@color/spu_info"
+            android:textColor="@color/white"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/dialog_button_manage_players"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Manage Players"
+            android:backgroundTint="@color/spu_gold_dark"
+            android:textColor="@color/black"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+</LinearLayout>

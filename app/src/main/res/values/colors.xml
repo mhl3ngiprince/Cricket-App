@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary theme colors -->
+    <color name="primary">#1E5631</color>          <!-- Cricket field green -->
+    <color name="primary_variant">#0D3D1E</color>  <!-- Darker green -->
+    <color name="secondary">#C43E00</color>        <!-- Cricket ball red -->
+    <color name="secondary_variant">#8A2B00</color><!-- Darker red -->
+
+    <!-- Complementary colors -->
+    <color name="spu_dark_blue">#003366</color>
+    <color name="spu_blue">#003366</color>
+    <color name="spu_gold">#FFCC33</color>
+    <color name="accent">#FFB700</color>           <!-- Sunny yellow -->
+
+    <!-- Standard colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#F2F2F2</color>
+    <color name="medium_gray">#AAAAAA</color>
+    <color name="dark_gray">#555555</color>
+
+    <!-- Semantic colors -->
+    <color name="success">#26A69A</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#29B6F6</color>
+
+    <!-- Cricket specific colors -->
+    <color name="pitch_brown">#D2B48C</color>
+    <color name="scoreboard_background">#212121</color>
+    <color name="scoreboard_text">#FFFFFF</color>
+
+    <!-- Original SPU colors (kept for backward compatibility) -->
+    <color name="spu_light_blue">#336699</color>
+    <color name="spu_background">#F0F4F8</color>
+    <color name="spu_accent_red">#C8102E</color>
+    <color name="spu_gold_light">#FFE066</color>
+    <color name="spu_gold_dark">#E6B800</color>
+    <color name="spu_blue_light">#4D79A6</color>
+    <color name="spu_silver">#C0C0C0</color>
+    <color name="spu_light_gray">#E6E6E6</color>
+    <color name="spu_success">#28A745</color>
+    <color name="spu_danger">#DC3545</color>
+    <color name="spu_warning">#FFC107</color>
+    <color name="spu_info">#17A2B8</color>
+    <color name="spu_dark_blue_transparent">#B0003366
+    </color> <!-- SPU Dark Blue with ~70% opacity -->
+</resources>

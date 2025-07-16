@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:padding="8dp">
+
+    <!-- Team Scores -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/text_team_batting_name_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TEAM A"
+            android:textColor="@color/spu_gold"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/text_team_score_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="120-3"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp" />
+
+        <TextView
+            android:id="@+id/text_overs_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(15.2)"
+            android:textColor="@color/spu_silver"
+            android:textSize="14sp"
+            android:layout_marginStart="4dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text_target_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TGT 180"
+            android:textColor="@color/spu_info"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <!-- Current Batsmen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/text_batsman1_on_strike_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="J. Smith*"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_batsman1_score_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="45 (32)"
+            android:textColor="@color/spu_gold"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/text_batsman2_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R. Jones"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/text_batsman2_score_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="28 (25)"
+            android:textColor="@color/spu_gold"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Current Bowler -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bowl:"
+            android:textColor="@color/spu_silver"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/text_bowler_name_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A. Kumar"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:layout_marginStart="4dp" />
+
+        <TextView
+            android:id="@+id/text_bowler_figures_simplified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2-25 (3.2)"
+            android:textColor="@color/spu_gold"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <!-- Last Ball / This Over -->
+    <TextView
+        android:id="@+id/text_this_over_simplified"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="This Over: 0 1 Wd 4 0 6"
+        android:textColor="@color/spu_silver"
+        android:textSize="12sp"
+        android:gravity="end" />
+
+</LinearLayout>

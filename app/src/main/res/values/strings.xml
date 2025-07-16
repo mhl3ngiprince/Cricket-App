@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">SPU Cricket Club</string>
+    <string name="app_description">Cricket match recording, analysis, and streaming</string>
+    <string name="app_version">Version 1.0.0</string>
+
+    <!-- Main UI Strings -->
+    <string name="camera_preview">Camera Preview</string>
+    <string name="start_recording">Start Recording</string>
+    <string name="stop_recording">Stop Recording</string>
+    <string name="start_scanning">Start Scanning</string>
+    <string name="stop_scanning">Stop Scanning</string>
+    <string name="start_streaming">Start Streaming</string>
+    <string name="stop_streaming">Stop Streaming</string>
+
+    <!-- Cricket Scoreboard Strings -->
+    <string name="target_label">Target: %1$d</string>
+    <string name="overs_format">(%1$d.%2$d ov)</string>
+    <string name="batsman_score_format">%1$d (%2$d)</string>
+    <string name="batsman_sr_format">SR: %1$.1f</string>
+    <string name="bowler_figures_format">%1$d/%2$d (%3$d.%4$d)</string>
+    <string name="current_over_label">This Over:</string>
+    <string name="empty_ball"></string>
+    <string name="dot_ball">·</string>
+    <string name="wicket_ball">W</string>
+    <string name="team_vs_format">%1$s vs %2$s</string>
+
+    <!-- Player Management -->
+    <string name="player_scores">Player Scores</string>
+    <string name="player_scores_empty">Player scores will be shown here</string>
+    <string name="player_name_hint">Enter player name</string>
+    <string name="add_player">Add Player</string>
+    <string name="coach_input_label">Coach Input:</string>
+    <string name="increment_score">+1 Run</string>
+    <string name="decrement_score">-1 Run</string>
+    <string name="team_statistics">Team Statistics</string>
+    <string name="add_wicket">Wicket</string>
+
+    <!-- Toast Messages -->
+    <string name="player_added">Player added: %1$s</string>
+    <string name="player_not_found">Player not found: %1$s</string>
+    <string name="score_added">%1$d runs added to %2$s</string>
+    <string name="recording_started">Recording started</string>
+    <string name="recording_stopped">Recording stopped</string>
+    <string name="video_saved">Video saved: %1$s</string>
+    <string name="video_failed">Video capture failed: %1$s</string>
+    <string name="scanning_started">Scanning started</string>
+    <string name="scanning_stopped">Scanning stopped</string>
+    <string name="streaming_started">Streaming started</string>
+    <string name="streaming_stopped">Streaming stopped</string>
+    <string name="permissions_not_granted">Permissions not granted by the user</string>
+    <string name="camera_error">Camera initialization error: %1$s</string>
+
+    <!-- Player Recognition -->
+    <string name="enable_recognition">Enable Recognition</string>
+    <string name="disable_recognition">Disable Recognition</string>
+    <string name="recognition_active">Recognition Active</string>
+    <string name="recognition_disabled">Recognition Disabled</string>
+    <string name="player_recognized">Recognized %1$s (%2$.2f)</string>
+    <string name="player_recognition_info">The AI player recognition system automatically identifies players on the field and updates match statistics. This technology is similar to player tracking systems used in professional broadcasts.</string>
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Match Analytics"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/spu_dark_blue"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Win Probability Section -->
+    <TextView
+        android:id="@+id/win_probability_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Win Probability"
+        android:textSize="14sp"
+        android:textColor="@color/spu_dark_blue" />
+
+    <TextView
+        android:id="@+id/match_status_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Match Status: Competitive"
+        android:textSize="12sp"
+        android:textColor="@color/spu_blue"
+        android:layout_marginBottom="4dp" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/win_probability_chart"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Score Projection Section -->
+    <TextView
+        android:id="@+id/projection_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Projected Score"
+        android:textSize="14sp"
+        android:textColor="@color/spu_dark_blue" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/projection_chart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Run Rate Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Run Rate Comparison"
+        android:textSize="14sp"
+        android:textColor="@color/spu_dark_blue" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/run_rate_chart"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Tactical Insights Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tactical Insights"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/spu_dark_blue"
+        android:layout_marginBottom="4dp" />
+
+    <LinearLayout
+        android:id="@+id/insights_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/spu_light_gray"
+        android:padding="8dp" />
+
+</LinearLayout>
