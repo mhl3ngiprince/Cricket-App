@@ -21,6 +21,7 @@ import com.finedine.spucricketclub.cricket.Player;
 import com.finedine.spucricketclub.data.PlayerDatabase;
 import com.finedine.spucricketclub.models.ActivityItem;
 import com.finedine.spucricketclub.models.PlayerStats;
+import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.SimpleDateFormat;
@@ -45,7 +46,8 @@ public class DashboardActivity extends AppCompatActivity {
     private CardView analyticsCard;
     private CardView matchHistoryCard;
     private CardView pitchVisionCard;
-    private FloatingActionButton newMatchFab;
+    //private FloatingActionButton newMatchFab;
+    private ExtendedFloatingActionButton newMatchFab;
 
     private RecyclerView topPlayersRecyclerView;
     private RecyclerView recentActivityRecyclerView;

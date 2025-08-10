@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.google.services)
-    id("com.google.firebase.crashlytics")
+    alias("com.google.firebase.crashlytics")
 }
 
 android {

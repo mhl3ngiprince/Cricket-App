@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -35,6 +36,8 @@ android {
 }
 
 dependencies {
+
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -86,6 +89,13 @@ dependencies {
 
     // Charts for statistics
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation libs.pose.detection.common
+    implementation libs.pose.detection.accurate
+    implementation libs.object1.detection.common
+    implementation libs.segmentation.selfie
+    implementation libs.object1.detection.custom
+    implementation libs.play.services.mlkit.text.recognition.common
+    implementation libs.play.services.mlkit.text.recognition
 
     // Room Database
     def room_version = "2.6.1"

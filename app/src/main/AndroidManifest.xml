@@ -72,8 +72,7 @@
         <activity
             android:name=".DashboardActivity"
             android:exported="true"
-            android:label="SPU Cricket Dashboard"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            android:label="SPU Cricket Dashboard">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

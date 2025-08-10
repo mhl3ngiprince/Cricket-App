@@ -1,5 +1,5 @@
 [versions]
-agp = "8.0.0"
+agp = "8.10.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -20,6 +20,13 @@ firebaseDatabase = "20.3.1"
 firebaseAuth = "22.3.1"
 googleServices = "4.4.1"
 firebaseCrashlyticsPlugin = "2.9.9"
+poseDetectionCommon = "17.0.0"
+poseDetectionAccurate = "17.0.0"
+objectDetectionCommon = "18.0.0"
+segmentationSelfie = "16.0.0-beta6"
+objectDetectionCustom = "17.0.2"
+playServicesMlkitTextRecognitionCommon = "19.1.0"
+playServicesMlkitTextRecognition = "19.0.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -42,6 +49,13 @@ firebase-database = { group = "com.google.firebase", name = "firebase-database" 
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth" }
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics" }
 firebase-crashlytics-ndk = { group = "com.google.firebase", name = "firebase-crashlytics-ndk" }
+pose-detection-common = { group = "com.google.mlkit", name = "pose-detection-common", version.ref = "poseDetectionCommon" }
+pose-detection-accurate = { group = "com.google.mlkit", name = "pose-detection-accurate", version.ref = "poseDetectionAccurate" }
+object1-detection-common = { group = "com.google.mlkit", name = "object-detection-common", version.ref = "objectDetectionCommon" }
+segmentation-selfie = { group = "com.google.mlkit", name = "segmentation-selfie", version.ref = "segmentationSelfie" }
+object1-detection-custom = { group = "com.google.mlkit", name = "object-detection-custom", version.ref = "objectDetectionCustom" }
+play-services-mlkit-text-recognition-common = { group = "com.google.android.gms", name = "play-services-mlkit-text-recognition-common", version.ref = "playServicesMlkitTextRecognitionCommon" }
+play-services-mlkit-text-recognition = { group = "com.google.android.gms", name = "play-services-mlkit-text-recognition", version.ref = "playServicesMlkitTextRecognition" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
