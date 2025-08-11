@@ -46,6 +46,7 @@ public class DashboardActivity extends AppCompatActivity {
     private CardView analyticsCard;
     private CardView matchHistoryCard;
     private CardView pitchVisionCard;
+    private CardView settingsCard;
     //private FloatingActionButton newMatchFab;
     private ExtendedFloatingActionButton newMatchFab;
 
@@ -91,8 +92,17 @@ public class DashboardActivity extends AppCompatActivity {
         analyticsCard = findViewById(R.id.card_analytics);
         matchHistoryCard = findViewById(R.id.card_match_history);
         pitchVisionCard = findViewById(R.id.card_pitch_vision);
+        settingsCard = findViewById(R.id.card_settings);
         newMatchFab = findViewById(R.id.fab_new_match);
-
+        // Defensive logging if any card is missing
+        if (teamManagementCard == null) Log.e("Dashboard", "Team Management Card not found!");
+        if (playerRegistrationCard == null)
+            Log.e("Dashboard", "Player Registration Card not found!");
+        if (analyticsCard == null) Log.e("Dashboard", "Analytics Card not found!");
+        if (matchHistoryCard == null) Log.e("Dashboard", "Match History Card not found!");
+        if (pitchVisionCard == null) Log.e("Dashboard", "Pitch Vision Card not found!");
+        if (settingsCard == null) Log.e("Dashboard", "Settings Card not found!");
+        if (newMatchFab == null) Log.e("Dashboard", "FAB New Match not found!");
         // RecyclerViews
         topPlayersRecyclerView = findViewById(R.id.top_players_recycler);
         topPlayersRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -106,78 +116,99 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void setupClickListeners() {
-        teamManagementCard.setOnClickListener(v -> {
-            try {
-                Intent intent = new Intent(this, TeamManagementActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error navigating to TeamManagement: " + e.getMessage());
-                Toast.makeText(this, "Error opening Team Management", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        playerRegistrationCard.setOnClickListener(v -> {
-            try {
-                Intent intent = new Intent(this, CoachInterfaceActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error navigating to CoachInterface: " + e.getMessage());
-                Toast.makeText(this, "Error opening Coach Interface", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        analyticsCard.setOnClickListener(v -> {
-            try {
-                // Launch the PitchVisionActivity
-                Intent intent = new Intent(this, PitchVisionActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error navigating to Analytics: " + e.getMessage());
-                Toast.makeText(this, "Error opening Analytics", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        matchHistoryCard.setOnClickListener(v -> {
-            try {
-                // TODO: Create MatchHistoryActivity
-                // For now, use placeholder activity
-                Intent intent = new Intent(this, CricketScoringActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error navigating to MatchHistory: " + e.getMessage());
-                Toast.makeText(this, "Error opening Match History", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        pitchVisionCard.setOnClickListener(v -> {
-            try {
-                Intent intent = new Intent(this, PitchVisionActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error navigating to PitchVision: " + e.getMessage());
-                Toast.makeText(this, "Error opening Pitch Vision", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        newMatchFab.setOnClickListener(v -> {
-            try {
-                Intent intent = new Intent(this, CricketScoringActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error starting new match: " + e.getMessage());
-                Toast.makeText(this, "Error starting new match", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        findViewById(R.id.button_start_match).setOnClickListener(v -> {
-            try {
-                Intent intent = new Intent(this, CricketScoringActivity.class);
-                startActivity(intent);
-            } catch (Exception e) {
-                Log.e("DashboardActivity", "Error starting match: " + e.getMessage());
-                Toast.makeText(this, "Error starting match", Toast.LENGTH_SHORT).show();
-            }
-        });
+        if (teamManagementCard != null) {
+            teamManagementCard.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(this, TeamManagementActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Error navigating to TeamManagement: " + e.getMessage());
+                    Toast.makeText(this, "Error opening Team Management", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        if (playerRegistrationCard != null) {
+            playerRegistrationCard.setOnClickListener(v -> {
+                Log.d("DashboardActivity", "Register Players card clicked");
+                Toast.makeText(this, "Opening Register Players...", Toast.LENGTH_SHORT).show();
+                try {
+                    startActivity(new Intent(this, com.finedine.spucricketclub.ui.PlayerRegistrationActivity.class));
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Error opening Register Players", e);
+                    Toast.makeText(this, "Could not open Register Players! " + e, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        if (analyticsCard != null) {
+            analyticsCard.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(this, PitchVisionActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Error navigating to Analytics: " + e.getMessage());
+                    Toast.makeText(this, "Error opening Analytics", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        if (matchHistoryCard != null) {
+            matchHistoryCard.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(this, CricketScoringActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Error navigating to MatchHistory: " + e.getMessage());
+                    Toast.makeText(this, "Error opening Match History", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        if (pitchVisionCard != null) {
+            pitchVisionCard.setOnClickListener(v -> {
+                try {
+                    Intent intent = new Intent(this, PitchVisionActivity.class);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Error navigating to PitchVision: " + e.getMessage());
+                    Toast.makeText(this, "Error opening Pitch Vision", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        if (newMatchFab != null) {
+            newMatchFab.setOnClickListener(v -> {
+                Log.d("DashboardActivity", "Start Match FAB pressed");
+                try {
+                    startActivity(new Intent(this, CricketScoringActivity.class));
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Critical error starting match", e);
+                    Toast.makeText(this, "Could not start match! " + e, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
+        View startMatchButton = findViewById(R.id.button_start_match);
+        if (startMatchButton != null) {
+            startMatchButton.setOnClickListener(v -> {
+                Log.d("DashboardActivity", "Start Match button pressed");
+                try {
+                    startActivity(new Intent(this, CricketScoringActivity.class));
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Critical error starting match (button_start_match)", e);
+                    Toast.makeText(this, "Could not start match! " + e, Toast.LENGTH_SHORT).show();
+                }
+            });
+        } else {
+            Log.e("DashboardActivity", "Start Match button not found!");
+        }
+        if (settingsCard != null) {
+            settingsCard.setOnClickListener(v -> {
+                Log.d("DashboardActivity", "Settings card clicked");
+                Toast.makeText(this, "Opening Settings...", Toast.LENGTH_SHORT).show();
+                try {
+                    startActivity(new Intent(this, SettingsActivity.class));
+                } catch (Exception e) {
+                    Log.e("DashboardActivity", "Error opening Settings", e);
+                    Toast.makeText(this, "Could not open Settings! " + e, Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
     }
 
     private void loadTopPlayers() {

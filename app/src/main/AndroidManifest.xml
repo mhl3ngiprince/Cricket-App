@@ -43,41 +43,54 @@
             android:name=".CricketScoringActivity"
             android:exported="false"
             android:label="Cricket Scoring"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
 
         <activity
             android:name=".RegisterPlayerFaceActivity"
             android:exported="false"
             android:label="Register Player Face"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
 
         <activity
             android:name=".ui.PlayerRegistrationActivity"
             android:exported="false"
             android:label="Player Registration"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
 
         <activity
             android:name=".PitchVisionActivity"
             android:exported="false"
             android:label="Pitch Vision"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
 
         <activity
             android:name=".CoachInterfaceActivity"
             android:exported="false"
             android:label="Coach Interface"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
 
         <activity
             android:name=".DashboardActivity"
             android:exported="true"
-            android:label="SPU Cricket Dashboard">
+            android:label="SPU Cricket Dashboard"
+            android:theme="@style/Theme.SPUCRICKETCLUB">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".TeamManagementActivity"
+            android:exported="false"
+            android:label="Team Management"
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false"
+            android:label="Settings"
+            android:theme="@style/Theme.SPUCRICKETCLUB" />
     </application>
 
 </manifest>

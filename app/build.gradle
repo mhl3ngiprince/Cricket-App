@@ -97,6 +97,11 @@ dependencies {
     implementation libs.play.services.mlkit.text.recognition.common
     implementation libs.play.services.mlkit.text.recognition
 
+    // Add or update MLKit Pose Detection and related libraries:
+    implementation 'com.google.mlkit:pose-detection:17.0.0'
+    implementation 'com.google.mlkit:vision-common:17.3.0'
+    // implementation 'com.google.mlkit:vision-mediapipe:16.2.0'
+
     // Room Database
     def room_version = "2.6.1"
     implementation "androidx.room:room-runtime:$room_version"
