@@ -53,7 +53,9 @@ public class SettingsActivity extends AppCompatActivity {
 
         SwitchMaterial sw = new SwitchMaterial(c, null, com.google.android.material.R.style.Widget_Material3_CompoundButton_Switch);
         sw.setChecked(false);
-        sw.setText(""); // Remove label text on switch (M3 best practice)
+        //sw.setText(""); // Remove label text on switch (M3 best practice)
+        sw.setTextOn("");
+        sw.setTextOff("");
         sw.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         row.addView(tv);
         row.addView(sw);
