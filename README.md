@@ -1,8 +1,8 @@
-# SPU Cricket Club App
+#  Cricket Club App
 
 ## Real-time Database Architecture
 
-The SPU Cricket Club app uses a hybrid database architecture that combines Firebase Realtime
+The  Cricket Club app uses a hybrid database architecture that combines Firebase Realtime
 Database and Room for an optimized experience:
 
 ### Key Components
@@ -27,7 +27,7 @@ Database and Room for an optimized experience:
 
 ## AI Player Recognition System
 
-The SPU Cricket Club app includes a cutting-edge AI-powered player recognition system that
+The  Cricket Club app includes a cutting-edge AI-powered player recognition system that
 automatically identifies players during matches and updates statistics in real-time.
 
 ### Features
